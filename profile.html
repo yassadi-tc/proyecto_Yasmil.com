@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css" />
+
+    <title>Perfil del Usuario</title>
+</head>
+<body>
+    <h2>Bienvenido, <span id="userName"></span></h2>
+    
+    <div>
+        <p><strong>Nombre:</strong> <span id="userFullName"></span></p>
+        <p><strong>Celular:</strong> <span id="userPhone"></span></p>
+        <p><strong>Dirección:</strong> <span id="userAddress"></span></p>
+    </div>
+    
+    <script>
+        const userData = JSON.parse(localStorage.getItem("userData"));
+
+        if (userData) {
+            document.getElementById("userName").textContent = userData.nombre;
+            document.getElementById("userFullName").textContent = userData.nombre;
+            document.getElementById("userPhone").textContent = userData.celular;
+            document.getElementById("userAddress").textContent = userData.direccion;
+        } else {
+            alert("No se encontró información de usuario. Redirigiendo al login...");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

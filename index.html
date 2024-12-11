@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda Yasmil</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.5.3.3.css" />
+    <script src="lib/bootstrap/bootstrap.5.3.3.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <h3 class="text-success">Yasmil.com</h3>
+
+        <div id="barra_menu">
+            <img src="img/menu.png" alt="Menú" width="20px" id="menu_icon" />
+            <p id="menu_text">Menú</p>
+            <nav id="menu_nav">
+                <ul class="nav-list">
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="#">Tecnología</a></li>
+                    <li><a href="#">Electrohogar</a></li>
+                    <li><a href="#">Mujer</a></li>
+                    <li><a href="#">Hombre</a></li>
+                    <li><a href="#">Niños</a></li>
+                    <li><a href="#">Mascotas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+       
+
+    <div id="barra_buscar">
+        <form onsubmit="realizarBusqueda(event)">
+            <input type="text" id="campo_busqueda" placeholder="Búsqueda de productos" />
+            <button type="submit">
+                <img class="buscar" src="img/buscar.png" alt="Buscar" />
+            </button>
+        </form>
+    </div>
+
+    <div>
+        <h5><a href="login.html">Hola, Inicia sesión</a></h5>
+    </div>
+
+    <div>
+        <h5><a href="mis_compras.html">Mis compras</a></h5>
+    </div>
+
+    <div id="pedido">
+        <img src="img/corazon.png" alt="Favoritos" />
+        <img src="img/carrito.png" alt="Carrito de compras" id="carritoIcono" data-bs-toggle="modal" data-bs-target="#carritoModal" />
+        <span id="numero-articulos" class="numero-articulos">0</span>
+    </div>
+    
+    <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carritoModalLabel">Tu Carrito de Compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="lista-carrito"></ul>
+                </div>
+                <div class="modal-footer">
+                    <p id="total-carrito">Total: $0</p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btn-ir-a-pagar">Ir a Pagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+    <script src="js/script.js"></script>
+</body>
+</html>
